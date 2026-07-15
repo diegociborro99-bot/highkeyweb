@@ -1,0 +1,7 @@
+highkey logo simple.jpg
+DEPLOY.md
+*.md
+.DS_Store
+.git
+.gitignore
+railway.json
