@@ -100,6 +100,7 @@ check('contacto más visual (borde conic animado + blobs de ambiente)', () => {
   return index.includes('contact-card') && index.includes('cb-1') && index.includes('cb-2') &&
     css.includes('caSpin') && css.includes('drift1');
 });
+check('sin correos visibles en la landing (ningún mailto: en index)', () => !index.includes('mailto:'));
 check('footer sin la descripción del estudio (solo texto visible)', () =>
   !(index.split('<footer')[1] || '').includes('Estudio digital'));
 
