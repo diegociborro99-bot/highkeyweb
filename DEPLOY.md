@@ -23,7 +23,6 @@ En Railway: **Settings → Networking → Custom Domain** → añade `highkeylab
 ## 4. Pendientes antes de compartir la URL
 
 - [ ] **Formulario**: el formulario ya envía vía [FormSubmit](https://formsubmit.co) a `diegociborro99@gmail.com`. El **primer envío** dispara un email de activación: haz clic en él una vez. Después, si quieres no exponer el email en el código, FormSubmit te da un alias aleatorio para sustituirlo en el `action`.
-- [ ] **Legal**: rellena los campos `[COMPLETAR]` de `legal.html` (titular, NIF, domicilio).
 - [ ] **Testimonio**: cuando tengas una cita real de un cliente (nombre + cargo), sustituye el bloque "Confían en Shiftia" según el TODO del HTML.
 
 ## Regenerar el CSS
