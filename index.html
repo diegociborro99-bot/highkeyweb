@@ -3,188 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Highkey Labs — IA estratégica para escalar tu negocio</title>
-<meta name="description" content="Highkey Labs construye webs a medida, soluciones de IA y automatizaciones. Creadores de ShiftIA, planificación de turnos con IA.">
-<meta property="og:title" content="Highkey Labs — IA estratégica para escalar tu negocio">
-<meta property="og:description" content="Webs a medida, soluciones de IA y automatizaciones que devuelven horas a tu equipo. Creadores de ShiftIA.">
+<title>Highkey Labs — Webs, IA y automatización para escalar tu negocio</title>
+<meta name="description" content="Estudio digital: webs a medida, automatizaciones con IA y software para el día a día de tu equipo. Creadores de Shiftia, planificación de turnos con IA. Presupuesto cerrado y respuesta en menos de 24 h.">
+<link rel="canonical" href="https://www.highkeylabs.es/">
+<meta name="theme-color" content="#eeeeee">
+<meta property="og:site_name" content="Highkey Labs">
+<meta property="og:title" content="Highkey Labs — Webs, IA y automatización para escalar tu negocio">
+<meta property="og:description" content="Webs a medida, soluciones de IA y automatizaciones que devuelven horas a tu equipo. Creadores de Shiftia.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://www.highkeylabs.es/">
+<meta property="og:image" content="https://www.highkeylabs.es/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_ES">
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-body { font-family: 'Inter', sans-serif; }
-
-/* Fase 4 — animaciones de carga */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Highkey Labs — Webs, IA y automatización para escalar tu negocio">
+<meta name="twitter:description" content="Webs a medida, soluciones de IA y automatizaciones que devuelven horas a tu equipo. Creadores de Shiftia.">
+<meta name="twitter:image" content="https://www.highkeylabs.es/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-400i.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.highkeylabs.es/#org",
+      "name": "Highkey Labs",
+      "url": "https://www.highkeylabs.es/",
+      "logo": "https://www.highkeylabs.es/logo.png",
+      "description": "Estudio digital: webs con estilo, automatizaciones con IA y software a medida. Creadores de Shiftia.",
+      "areaServed": "ES"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Shiftia",
+      "url": "https://www.shiftia.es",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "SaaS de planificación de turnos con IA para hospitales, clínicas, residencias, fábricas, retail y hostelería. La planilla se hace sola respetando el convenio.",
+      "offers": {
+        "@type": "Offer",
+        "price": "29",
+        "priceCurrency": "EUR",
+        "description": "Tarifa plana desde 29 €/mes, sin coste por trabajador"
+      },
+      "creator": { "@id": "https://www.highkeylabs.es/#org" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta un proyecto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende del alcance, pero siempre con presupuesto cerrado tras el descubrimiento: sabes el precio total antes de empezar. Hacemos desde landings hasta SaaS completos." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tardáis en entregar?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La mayoría de proyectos salen a producción en 2–4 semanas. Trabajamos en sprints cortos con entregas visibles cada semana, así que ves el avance desde el primer día." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El código y los accesos son míos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, al 100%. Repositorio, dominio y cuentas a tu nombre desde el día uno. Si algún día quieres cambiar de proveedor, te llevas todo contigo." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dais soporte después del lanzamiento?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tras el lanzamiento puedes seguir con nosotros en mejora continua, sin permanencia: medimos, proponemos e iteramos lo que más impacto tiene." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajáis con las herramientas que ya uso?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Las automatizaciones se integran con tu stack actual: correo, hojas de cálculo, ERP, CRM, WhatsApp, facturación… No te obligamos a cambiar de herramientas." }
+        }
+      ]
+    }
+  ]
 }
-.animate-on-load {
-  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
-  transform: translateY(20px);
-}
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
-.delay-600 { animation-delay: 600ms; }
-
-/* Reveal on scroll para secciones inferiores */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.rd-1 { transition-delay: 90ms; }
-.rd-2 { transition-delay: 180ms; }
-.rd-3 { transition-delay: 270ms; }
-
-/* Nav fija: fondo al hacer scroll */
-#topNav { transition: background-color .3s ease, padding .3s ease, box-shadow .3s ease, backdrop-filter .3s ease; }
-#topNav.nav-scrolled {
-  background: rgba(238,238,238,0.86);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding-top: 14px;
-  padding-bottom: 14px;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-}
-
-/* Sección de dolores: escena viva */
-.reveal.spring { transform: translateY(28px) scale(0.96); transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
-.reveal.spring.visible { transform: none; }
-.clock-hand { transform-box: fill-box; transform-origin: 50% 100%; animation: clockHand 6s linear infinite; }
-@keyframes clockHand { to { transform: rotate(360deg); } }
-.chart-line { stroke-dasharray: 120; stroke-dashoffset: 120; animation: chartDraw 4s ease-out infinite; }
-@keyframes chartDraw { 0% { stroke-dashoffset: 120; } 55% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; } }
-.doc-wobble { animation: wobble 2.6s ease-in-out infinite; }
-.doc-wobble.d2 { animation-duration: 3.2s; animation-delay: .4s; }
-.doc-wobble.d3 { animation-duration: 2.9s; animation-delay: .8s; }
-@keyframes wobble { 0%, 100% { transform: rotate(-4deg) translateY(0); } 50% { transform: rotate(4deg) translateY(-2px); } }
-.typing-dot { animation: dotBounce 1.3s ease-in-out infinite; }
-.typing-dot.t2 { animation-delay: .15s; }
-.typing-dot.t3 { animation-delay: .3s; }
-@keyframes dotBounce { 0%, 60%, 100% { transform: translateY(0); opacity: .35; } 30% { transform: translateY(-4px); opacity: 1; } }
-
-/* Barra de progreso de scroll */
-#progressBar {
-  position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60;
-  background: linear-gradient(90deg, #7e22ce, #6366f1);
-  transform-origin: left; transform: scaleX(0);
-}
-
-/* Palabra rotatoria del strip de oferta */
-.rot-word {
-  display: inline-block;
-  background: linear-gradient(100deg, #7e22ce, #6366f1);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), opacity .35s ease;
-}
-.rot-word.out { transform: translateY(14px); opacity: 0; }
-
-/* Glow que sigue al cursor en el hero */
-#heroGlow {
-  position: absolute; width: 480px; height: 480px; border-radius: 9999px;
-  background: radial-gradient(circle, rgba(126,34,206,0.12), transparent 60%);
-  pointer-events: none; filter: blur(40px);
-  transform: translate(-50%, -50%); left: 50%; top: 40%;
-  transition: opacity .4s ease; opacity: 0;
-}
-
-/* Borde glow en hover para tarjetas bento */
-.glow-card { position: relative; }
-.glow-card::before {
-  content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px;
-  background: linear-gradient(135deg, rgba(126,34,206,0.5), transparent 38%, transparent 62%, rgba(99,102,241,0.5));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor; mask-composite: exclude;
-  opacity: 0; transition: opacity .4s ease; pointer-events: none;
-}
-.glow-card:hover::before { opacity: 1; }
-
-/* Banda CTA con gradiente animado */
-.grad-band {
-  background: linear-gradient(120deg, #7e22ce, #6d28d9, #4f46e5, #7e22ce);
-  background-size: 250% 250%;
-  animation: gradShift 9s ease infinite;
-}
-@keyframes gradShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Mockup 3D con tilt (servicio webs) */
-.tilt { perspective: 900px; }
-.tilt-inner {
-  transform-style: preserve-3d;
-  transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform;
-}
-.tz-20 { transform: translateZ(20px); }
-.tz-40 { transform: translateZ(40px); }
-.tz-60 { transform: translateZ(60px); }
-
-/* Flujo de automatización animado */
-.flow-rail { position: absolute; left: 19px; top: 44px; bottom: 44px; width: 2px; background: rgba(0,0,0,0.07); }
-.flow-dot {
-  position: absolute; left: -3px; width: 8px; height: 8px; border-radius: 9999px;
-  background: #7e22ce; box-shadow: 0 0 0 4px rgba(126,34,206,0.12);
-  animation: flowMove 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-@keyframes flowMove {
-  0% { top: 0; opacity: 0; }
-  12% { opacity: 1; }
-  88% { opacity: 1; }
-  100% { top: calc(100% - 8px); opacity: 0; }
-}
-
-/* Ticks animados de la mini-app (software a medida) */
-@keyframes tickPop {
-  0%, 55% { transform: scale(0); opacity: 0; }
-  70% { transform: scale(1.25); opacity: 1; }
-  85%, 100% { transform: scale(1); opacity: 1; }
-}
-.tick-anim { animation: tickPop 4s ease infinite; }
-.tick-anim.t2 { animation-delay: .9s; }
-.tick-anim.t3 { animation-delay: 1.8s; }
-
-/* FAQ */
-summary { list-style: none; cursor: pointer; }
-summary::-webkit-details-marker { display: none; }
-details[open] .faq-icon { transform: rotate(45deg); }
-.faq-icon { transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1); }
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-on-load { animation: none; opacity: 1; transform: none; }
-  .reveal { opacity: 1; transform: none; transition: none; }
-  .clock-hand, .chart-line, .doc-wobble, .typing-dot { animation: none; }
-  .chart-line { stroke-dashoffset: 0; }
-  .flow-dot { animation: none; opacity: 0; }
-  .tick-anim { animation: none; transform: scale(1); opacity: 1; }
-  .tilt-inner { transform: none !important; }
-  .grad-band { animation: none; }
-  .rot-word { transition: none; }
-  #heroGlow { display: none; }
-  html { scroll-behavior: auto; }
-}
-</style>
+</script>
 <noscript><style>.animate-on-load, .reveal { opacity: 1; transform: none; animation: none; }</style></noscript>
 </head>
 <body class="bg-[#eeeeee] text-black antialiased">
 
+<a href="#main" class="skip-link">Saltar al contenido</a>
 <div id="progressBar" aria-hidden="true"></div>
 
 <!-- ===== NAV FIJA ===== -->
 <nav id="topNav" class="fixed top-0 left-0 right-0 z-50 pt-6 pb-4 px-6 lg:px-12 flex items-center justify-between animate-on-load delay-100" aria-label="Navegación principal">
   <a href="#" class="flex items-center gap-2.5" aria-label="Highkey Labs — inicio">
-    <img src="logo.png" alt="Logo de Highkey Labs" class="h-7 w-auto">
+    <img src="logo.png" alt="Logo de Highkey Labs" width="149" height="96" class="h-7 w-auto">
     <span class="text-[15px] font-semibold tracking-tight">Highkey Labs</span>
   </a>
   <div class="hidden md:flex items-center gap-8">
@@ -213,14 +127,16 @@ details[open] .faq-icon { transform: rotate(45deg); }
   <a href="#contacto" class="bg-black text-white px-8 py-3 rounded-full text-[15px] font-semibold mt-4">Empezar proyecto</a>
 </div>
 
-<!-- ===== HERO (según prompt) ===== -->
+<main id="main">
+
+<!-- ===== HERO ===== -->
 <div id="hero" class="relative min-h-screen flex flex-col w-full overflow-hidden bg-[#eeeeee] text-black">
 
-  <!-- Vídeo de fondo -->
+  <!-- Vídeo de fondo (self-hosted, en pausa fuera de pantalla) -->
   <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0" aria-hidden="true">
     <div class="relative w-[150%] aspect-square max-w-[800px] md:w-[800px] md:h-[800px] flex-shrink-0">
-      <video autoplay loop muted playsinline class="w-full h-full object-cover">
-        <source src="https://cdn.sceneai.art/Hero%20Section%20Video/c653421c-6cd9-472a-811a-b833dd320372.mp4" type="video/mp4">
+      <video id="heroVideo" autoplay loop muted playsinline preload="metadata" poster="hero-poster.jpg" width="800" height="800" class="w-full h-full object-cover">
+        <source src="hero.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -229,26 +145,30 @@ details[open] .faq-icon { transform: rotate(45deg); }
   <!-- Contenido del hero alineado abajo -->
   <div class="relative z-10 flex-1 flex flex-col items-center justify-end px-6 text-center pb-4 md:pb-8 pt-24 mt-auto">
 
-    <h1 class="animate-on-load delay-300 text-[36px] md:text-[44px] lg:text-[56px] font-medium leading-[1.1] tracking-[-0.02em] max-w-[800px]">
-      IA estratégica para escalar<br class="hidden md:block"> el crecimiento de tu negocio.
+    <h1 class="animate-on-load delay-300 font-serifd text-[40px] md:text-[50px] lg:text-[62px] leading-[1.05] max-w-[860px]">
+      IA estratégica para <em class="text-[#6d28d9]">escalar</em><br class="hidden md:block"> el crecimiento de tu negocio.
     </h1>
 
-    <a href="#contacto" class="animate-on-load delay-500 group mt-10 bg-[#7e22ce] hover:bg-[#6b21a8] text-white border border-transparent pl-6 pr-2 py-2 rounded-full font-medium text-[15px] flex items-center gap-4 shadow-xl hover:shadow-2xl transition-all duration-300">
+    <p class="animate-on-load delay-400 mt-6 text-[15px] md:text-[17px] text-black/60 font-light leading-relaxed max-w-[560px]">
+      Webs con estilo, automatizaciones con IA y software a medida para tu equipo. Creadores de Shiftia, la planilla que se hace sola.
+    </p>
+
+    <a href="#contacto" class="animate-on-load delay-500 group mt-9 bg-[#7e22ce] hover:bg-[#6b21a8] text-white border border-transparent pl-6 pr-2 py-2 rounded-full font-medium text-[15px] flex items-center gap-4 shadow-xl hover:shadow-2xl transition-all duration-300">
       Cuéntanos tu caso
       <span class="w-8 h-8 rounded-full bg-white text-[#7e22ce] flex items-center justify-center">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </span>
     </a>
 
-    <p class="animate-on-load delay-600 text-[12px] text-black/45 mt-5 tracking-wide">Respuesta en menos de 24 h · Presupuesto cerrado · Sin permanencia</p>
+    <p class="animate-on-load delay-600 text-[12px] text-black/60 mt-5 tracking-wide">Respuesta en menos de 24 h · Presupuesto cerrado · Sin permanencia</p>
   </div>
 </div>
 
 <!-- ===== OFERTA (rotador) ===== -->
 <section id="oferta" class="bg-white pt-20 pb-16 px-6 text-center overflow-hidden">
   <div class="max-w-4xl mx-auto reveal">
-    <p class="text-[11px] uppercase tracking-[0.2em] text-black/40 font-semibold mb-6">Lo que hacemos</p>
-    <h2 class="text-[34px] md:text-[52px] font-medium leading-[1.08] tracking-[-0.02em]">
+    <p class="text-[11px] uppercase tracking-[0.2em] text-black/55 font-semibold mb-6">Lo que hacemos</p>
+    <h2 class="font-serifd text-[38px] md:text-[58px] leading-[1.06]">
       Construimos<br>
       <span id="rotWord" class="rot-word">webs novedosas</span><span class="text-black/30">.</span>
     </h2>
@@ -265,8 +185,8 @@ details[open] .faq-icon { transform: rotate(45deg); }
 <section id="problema" class="bg-white pt-20 pb-24 px-6 scroll-mt-24">
   <div class="max-w-6xl mx-auto">
     <div class="max-w-xl mb-12 reveal">
-      <p class="text-[11px] uppercase tracking-[0.2em] text-black/40 font-semibold mb-4">El problema</p>
-      <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.1] tracking-[-0.02em] mb-3">¿Te suena alguna de estas?</h2>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-black/55 font-semibold mb-4">El problema</p>
+      <h2 class="font-serifd text-[30px] md:text-[44px] leading-[1.08] mb-3">¿Te suena alguna de estas?</h2>
       <p class="text-black/50 text-[15px] font-light">Una semana cualquiera, sin automatizar.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-5 mb-8">
@@ -279,7 +199,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
           </span>
           <div class="flex-1 min-w-0">
             <p class="text-[12px] font-bold leading-tight">Recordatorio</p>
-            <p class="text-[10px] text-black/40 uppercase tracking-wider">Lunes · 08:12</p>
+            <p class="text-[10px] text-black/55 uppercase tracking-wider">Lunes · 08:12</p>
           </div>
           <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse flex-shrink-0" aria-hidden="true"></span>
         </div>
@@ -295,7 +215,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
           </span>
           <div class="flex-1 min-w-0">
             <p class="text-[12px] font-bold leading-tight">Analítica semanal</p>
-            <p class="text-[10px] text-black/40 uppercase tracking-wider">Miércoles · 17:40</p>
+            <p class="text-[10px] text-black/55 uppercase tracking-wider">Miércoles · 17:40</p>
           </div>
           <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse flex-shrink-0" aria-hidden="true"></span>
         </div>
@@ -315,16 +235,16 @@ details[open] .faq-icon { transform: rotate(45deg); }
           </span>
           <div class="flex-1 min-w-0">
             <p class="text-[12px] font-bold leading-tight">Contabilidad</p>
-            <p class="text-[10px] text-black/40 uppercase tracking-wider">Viernes · 13:05</p>
+            <p class="text-[10px] text-black/55 uppercase tracking-wider">Viernes · 13:05</p>
           </div>
           <span class="w-2 h-2 rounded-full bg-rose-400 animate-pulse flex-shrink-0" aria-hidden="true"></span>
         </div>
         <p class="text-[14px] leading-relaxed text-black/75 mb-4">«¿Me pasas la factura de marzo? El Excel no cuadra con el banco.»</p>
         <div class="flex items-center gap-2.5 mb-4" aria-hidden="true">
-          <span class="doc-wobble inline-flex w-8 h-9 rounded-md bg-[#fafafa] border border-black/10 items-center justify-center text-[8px] font-bold text-black/40">XLS</span>
-          <span class="doc-wobble d2 inline-flex w-8 h-9 rounded-md bg-[#fafafa] border border-black/10 items-center justify-center text-[8px] font-bold text-black/40">PDF</span>
-          <span class="doc-wobble d3 inline-flex w-8 h-9 rounded-md bg-[#fafafa] border border-black/10 items-center justify-center text-[8px] font-bold text-black/40">MAIL</span>
-          <span class="text-[11px] text-black/35 ml-1">…¿y el original?</span>
+          <span class="doc-wobble inline-flex w-8 h-9 rounded-md bg-[#fafafa] border border-black/10 items-center justify-center text-[8px] font-bold text-black/55">XLS</span>
+          <span class="doc-wobble d2 inline-flex w-8 h-9 rounded-md bg-[#fafafa] border border-black/10 items-center justify-center text-[8px] font-bold text-black/55">PDF</span>
+          <span class="doc-wobble d3 inline-flex w-8 h-9 rounded-md bg-[#fafafa] border border-black/10 items-center justify-center text-[8px] font-bold text-black/55">MAIL</span>
+          <span class="text-[11px] text-black/50 ml-1">…¿y el original?</span>
         </div>
         <span class="inline-flex items-center gap-1.5 bg-rose-50 border border-rose-200 text-rose-600 rounded-full px-3 py-1 text-[11px] font-semibold">Datos en 4 sitios</span>
       </div>
@@ -347,8 +267,8 @@ details[open] .faq-icon { transform: rotate(45deg); }
 <section id="servicios" class="bg-[#eeeeee] py-24 md:py-28 px-6 scroll-mt-24">
   <div class="max-w-6xl mx-auto">
     <div class="max-w-xl mb-14 reveal">
-      <p class="text-[11px] uppercase tracking-[0.2em] text-black/40 font-semibold mb-4">Servicios</p>
-      <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.1] tracking-[-0.02em] mb-4">Tres formas de hacer crecer tu negocio</h2>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-black/55 font-semibold mb-4">Servicios</p>
+      <h2 class="font-serifd text-[30px] md:text-[44px] leading-[1.08] mb-4">Tres formas de hacer crecer tu negocio</h2>
       <p class="text-black/60 text-[16px] font-light">Cada proyecto empieza por entender tu operación. Después, construimos solo lo que aporta.</p>
     </div>
     <div class="grid lg:grid-cols-3 gap-5">
@@ -398,7 +318,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
                 </div>
                 <div class="p-5">
                   <div class="flex items-center justify-between mb-4">
-                    <img src="logo.png" alt="" class="h-4 w-auto">
+                    <img src="logo.png" alt="" aria-hidden="true" class="h-4 w-auto">
                     <span class="h-5 w-16 rounded-full bg-[#7e22ce]"></span>
                   </div>
                   <div class="h-3.5 w-4/5 rounded bg-black/80 mb-2"></div>
@@ -415,7 +335,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7e22ce" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>
                 <div>
                   <p class="text-[11px] font-bold leading-tight">Elementos 3D</p>
-                  <p class="text-[10px] text-black/45 leading-tight">Profundidad real</p>
+                  <p class="text-[10px] text-black/60 leading-tight">Profundidad real</p>
                 </div>
               </div>
               <div class="tz-60 absolute top-0 right-6 bg-white border border-black/10 shadow-xl rounded-full px-4 py-2 flex items-center gap-2">
@@ -443,19 +363,19 @@ details[open] .faq-icon { transform: rotate(45deg); }
               <span class="w-10 h-10 rounded-lg bg-white border border-black/10 flex items-center justify-center flex-shrink-0">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-black/60"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg>
               </span>
-              <div><p class="text-[12px] font-semibold leading-tight">Llega una factura</p><p class="text-[11px] text-black/45 leading-tight">Email, PDF o foto</p></div>
+              <div><p class="text-[12px] font-semibold leading-tight">Llega una factura</p><p class="text-[11px] text-black/60 leading-tight">Email, PDF o foto</p></div>
             </div>
             <div class="relative flex items-center gap-3.5 bg-[#7e22ce]/5 border border-[#7e22ce]/20 rounded-xl px-4 py-3">
               <span class="w-10 h-10 rounded-lg bg-white border border-[#7e22ce]/25 flex items-center justify-center flex-shrink-0">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg>
               </span>
-              <div><p class="text-[12px] font-semibold leading-tight text-[#7e22ce]">La IA la procesa</p><p class="text-[11px] text-black/45 leading-tight">Extrae, valida y clasifica</p></div>
+              <div><p class="text-[12px] font-semibold leading-tight text-[#7e22ce]">La IA la procesa</p><p class="text-[11px] text-black/60 leading-tight">Extrae, valida y clasifica</p></div>
             </div>
             <div class="relative flex items-center gap-3.5 bg-[#fafafa] border border-black/5 rounded-xl px-4 py-3">
               <span class="w-10 h-10 rounded-lg bg-white border border-black/10 flex items-center justify-center flex-shrink-0">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
               </span>
-              <div><p class="text-[12px] font-semibold leading-tight">Todo en su sitio</p><p class="text-[11px] text-black/45 leading-tight">Contabilidad al día, sin teclear</p></div>
+              <div><p class="text-[12px] font-semibold leading-tight">Todo en su sitio</p><p class="text-[11px] text-black/60 leading-tight">Contabilidad al día, sin teclear</p></div>
             </div>
           </div>
         </div>
@@ -496,7 +416,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
             <div class="bg-white border border-black/10 rounded-2xl shadow-xl overflow-hidden">
               <div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-black/5 bg-[#fafafa]">
                 <span class="w-2 h-2 rounded-full bg-[#ff5f57]"></span><span class="w-2 h-2 rounded-full bg-[#febc2e]"></span><span class="w-2 h-2 rounded-full bg-[#28c840]"></span>
-                <span class="ml-3 text-[11px] text-black/40 font-medium">Panel interno · Tu equipo</span>
+                <span class="ml-3 text-[11px] text-black/55 font-medium">Panel interno · Tu equipo</span>
               </div>
               <div class="flex">
                 <div class="w-14 border-r border-black/5 bg-[#fafafa] py-4 flex flex-col items-center gap-3">
@@ -545,19 +465,19 @@ details[open] .faq-icon { transform: rotate(45deg); }
   <div class="max-w-6xl mx-auto">
     <div class="reveal bg-black text-white rounded-[28px] px-8 py-12 md:px-14 md:py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div>
-        <p class="text-[30px] md:text-[36px] font-medium tracking-[-0.02em] leading-none mb-3">~<span data-count="18">18</span> h<span class="text-[#c084fc]">/mes</span></p>
+        <p class="font-serifd text-[42px] md:text-[52px] leading-none mb-3">~<span data-count="18">18</span> h<span class="text-[#c084fc]">/mes</span></p>
         <p class="text-white/50 text-[13px] font-light">ahorradas planificando turnos con ShiftIA</p>
       </div>
       <div>
-        <p class="text-[30px] md:text-[36px] font-medium tracking-[-0.02em] leading-none mb-3">&lt; 1 s</p>
+        <p class="font-serifd text-[42px] md:text-[52px] leading-none mb-3">&lt; 1 s</p>
         <p class="text-white/50 text-[13px] font-light">3 candidatos de cobertura sugeridos por la IA</p>
       </div>
       <div>
-        <p class="text-[30px] md:text-[36px] font-medium tracking-[-0.02em] leading-none mb-3">2–4 sem</p>
+        <p class="font-serifd text-[42px] md:text-[52px] leading-none mb-3">2–4 sem</p>
         <p class="text-white/50 text-[13px] font-light">de la idea a producción en la mayoría de proyectos</p>
       </div>
       <div>
-        <p class="text-[30px] md:text-[36px] font-medium tracking-[-0.02em] leading-none mb-3">&lt; <span data-count="24">24</span> h</p>
+        <p class="font-serifd text-[42px] md:text-[52px] leading-none mb-3">&lt; <span data-count="24">24</span> h</p>
         <p class="text-white/50 text-[13px] font-light">para responderte con una propuesta honesta</p>
       </div>
     </div>
@@ -569,16 +489,16 @@ details[open] .faq-icon { transform: rotate(45deg); }
   <div class="max-w-6xl mx-auto">
     <div class="grid md:grid-cols-2 gap-14 items-center">
       <div class="reveal">
-        <p class="text-[11px] uppercase tracking-[0.2em] text-black/40 font-semibold mb-4">Producto estrella</p>
+        <p class="text-[11px] uppercase tracking-[0.2em] text-black/55 font-semibold mb-4">Producto estrella</p>
         <div class="flex items-center gap-4 mb-5">
-          <img src="shiftia-logo.svg" alt="Logo de Shiftia" class="w-11 h-11 md:w-12 md:h-12 rounded-[10px] shadow-md">
+          <img src="shiftia-logo.svg" alt="Logo de Shiftia" width="48" height="48" class="w-11 h-11 md:w-12 md:h-12 rounded-[10px] shadow-md">
           <span class="text-[30px] md:text-[38px] font-semibold tracking-[-0.03em] leading-none">Shiftia</span>
           <span class="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
             Motor v8 · en vivo
           </span>
         </div>
-        <h2 class="text-[22px] md:text-[28px] font-medium leading-[1.15] tracking-[-0.02em] mb-5 text-black/80">La planilla se hace sola.</h2>
+        <h2 class="font-serifd text-[26px] md:text-[32px] leading-[1.12] mb-5 text-black/80">La planilla se hace <em class="text-[#6d28d9]">sola</em>.</h2>
         <p class="text-black/60 text-[16px] font-light mb-8 max-w-[480px]">Nuestro SaaS de planificación de turnos con IA para hospitales, clínicas, residencias, fábricas, retail y hostelería. Ahorra ~18 h al mes planificando — y unos 4.800 €/año en un equipo típico.</p>
         <ul class="space-y-4 mb-8">
           <li class="flex items-start gap-3 text-[15px]">
@@ -600,7 +520,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
             Visitar shiftia.es
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </a>
-          <span class="text-[13px] text-black/45">Desarrollado íntegramente por Highkey Labs</span>
+          <span class="text-[13px] text-black/60">Desarrollado íntegramente por Highkey Labs</span>
         </div>
       </div>
       <div class="reveal rd-2 relative">
@@ -609,9 +529,9 @@ details[open] .faq-icon { transform: rotate(45deg); }
             <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-[#febc2e]"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-[#28c840]"></span>
-            <span class="ml-3 flex-1 max-w-[220px] bg-black/5 rounded-md px-3 py-1 text-[11px] text-black/40 flex items-center justify-center gap-1.5 truncate"><img src="shiftia-logo.svg" alt="" class="w-3 h-3 rounded-[3px]" aria-hidden="true">shiftia.es</span>
+            <span class="ml-3 flex-1 max-w-[220px] bg-black/5 rounded-md px-3 py-1 text-[11px] text-black/55 flex items-center justify-center gap-1.5 truncate"><img src="shiftia-logo.svg" alt="" class="w-3 h-3 rounded-[3px]" aria-hidden="true">shiftia.es</span>
           </div>
-          <img src="https://www.shiftia.es/product-mockup.svg" alt="Vista real del cuadrante semanal de Shiftia con turnos asignados automáticamente por la IA" class="w-full h-auto block" loading="lazy">
+          <img src="shiftia-mockup.svg" alt="Vista real del cuadrante semanal de Shiftia con turnos asignados automáticamente por la IA" width="1280" height="880" class="w-full h-auto block" loading="lazy">
         </div>
         <div class="absolute -bottom-5 left-6 bg-white border border-black/10 shadow-lg rounded-full px-4 py-2.5 inline-flex items-center gap-2.5 text-[12px] font-medium text-[#7e22ce]">
           <span class="w-1.5 h-1.5 rounded-full bg-[#7e22ce] animate-pulse" aria-hidden="true"></span>
@@ -619,14 +539,16 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </div>
       </div>
     </div>
-    <div class="reveal mt-20 pt-10 border-t border-black/5">
-      <p class="text-center text-[11px] uppercase tracking-[0.2em] text-black/35 font-semibold mb-6">Confían en Shiftia</p>
-      <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 text-black/45">
-        <span class="text-[14px] font-semibold tracking-wide">SPAR <span class="font-light text-[12px] text-black/35">· Retail, Gran Canaria</span></span>
-        <span class="text-[14px] font-semibold tracking-wide">NONWATIO <span class="font-light text-[12px] text-black/35">· Frío industrial, Valencia</span></span>
-        <span class="text-[14px] font-semibold tracking-wide">La Otra Abacería <span class="font-light text-[12px] text-black/35">· Hostelería, León</span></span>
-        <span class="text-[14px] font-semibold tracking-wide">Servicios sanitarios <span class="font-light text-[12px] text-black/35">· Sanidad, Asturias</span></span>
+    <div class="reveal mt-20 pt-12 border-t border-black/5">
+      <p class="text-center text-[11px] uppercase tracking-[0.2em] text-black/50 font-semibold mb-10">Confían en Shiftia</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 text-center md:divide-x md:divide-black/10">
+        <div><p class="text-[16px] font-semibold tracking-wide">SPAR</p><p class="text-[12px] text-black/50 font-light mt-1.5">Retail · Gran Canaria</p></div>
+        <div><p class="text-[16px] font-semibold tracking-wide">NONWATIO</p><p class="text-[12px] text-black/50 font-light mt-1.5">Frío industrial · Valencia</p></div>
+        <div><p class="text-[16px] font-semibold tracking-wide">La Otra Abacería</p><p class="text-[12px] text-black/50 font-light mt-1.5">Hostelería · León</p></div>
+        <div><p class="text-[16px] font-semibold tracking-wide">Servicios sanitarios</p><p class="text-[12px] text-black/50 font-light mt-1.5">Sanidad · Asturias</p></div>
       </div>
+      <!-- TODO: cuando tengáis un testimonio real (frase + nombre + cargo + empresa), sustituid este bloque
+           por una cita en Instrument Serif con la persona debajo: convierte mucho más que una lista de logos. -->
     </div>
   </div>
 </section>
@@ -634,10 +556,8 @@ details[open] .faq-icon { transform: rotate(45deg); }
 <!-- ===== BANDA CTA ===== -->
 <section class="bg-white pb-24 px-6">
   <div class="max-w-6xl mx-auto">
-    <div class="reveal grad-band rounded-[28px] px-8 py-14 md:px-14 md:py-16 text-center text-white relative overflow-hidden">
-      <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-white/10 blur-3xl" aria-hidden="true"></div>
-      <div class="absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-white/10 blur-3xl" aria-hidden="true"></div>
-      <h2 class="relative text-[26px] md:text-[38px] font-medium leading-[1.15] tracking-[-0.02em] max-w-2xl mx-auto mb-4">¿Tienes un proceso que te roba horas? Lo convertimos en software.</h2>
+    <div class="reveal cta-band rounded-[28px] px-8 py-14 md:px-14 md:py-16 text-center text-white relative overflow-hidden">
+      <h2 class="relative font-serifd text-[28px] md:text-[42px] leading-[1.1] max-w-2xl mx-auto mb-4">¿Tienes un proceso que te roba horas? Lo convertimos en <em>software</em>.</h2>
       <p class="relative text-white/75 text-[15px] font-light max-w-md mx-auto mb-9">Cuéntanoslo en un email de tres líneas. Nosotros ponemos la propuesta, los plazos y el precio cerrado.</p>
       <div class="relative flex justify-center">
         <a href="#contacto" class="group inline-flex bg-white text-[#7e22ce] pl-6 pr-2 py-2 rounded-full font-semibold text-[15px] items-center gap-4 shadow-xl hover:shadow-2xl hover:bg-white/95 transition-all duration-300">
@@ -655,8 +575,8 @@ details[open] .faq-icon { transform: rotate(45deg); }
 <section id="proceso" class="bg-[#eeeeee] py-24 md:py-28 px-6 scroll-mt-24">
   <div class="max-w-6xl mx-auto">
     <div class="max-w-xl mb-14 reveal">
-      <p class="text-[11px] uppercase tracking-[0.2em] text-black/40 font-semibold mb-4">Proceso</p>
-      <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.1] tracking-[-0.02em] mb-4">Así trabajamos contigo</h2>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-black/55 font-semibold mb-4">Proceso</p>
+      <h2 class="font-serifd text-[30px] md:text-[44px] leading-[1.08] mb-4">Así trabajamos contigo</h2>
       <p class="text-black/60 text-[16px] font-light">Un método claro, con entregas visibles desde la primera semana.</p>
     </div>
     <div class="relative">
@@ -665,7 +585,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
       <article class="reveal bg-white border border-black/5 rounded-[20px] p-7 hover:border-black/15 transition-colors">
         <div class="flex items-center justify-between mb-4">
           <span class="text-[12px] font-bold tracking-[0.15em] text-[#7e22ce]">01</span>
-          <span class="text-[10px] uppercase tracking-widest text-black/35 font-semibold">Semana 0</span>
+          <span class="text-[10px] uppercase tracking-widest text-black/50 font-semibold">Semana 0</span>
         </div>
         <h3 class="text-[15px] font-semibold mb-2.5">Descubrimiento</h3>
         <p class="text-black/60 text-[13px] font-light leading-relaxed">Escuchamos cómo trabajas y localizamos dónde se pierde el tiempo o el dinero.</p>
@@ -673,7 +593,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
       <article class="reveal rd-1 bg-white border border-black/5 rounded-[20px] p-7 hover:border-black/15 transition-colors">
         <div class="flex items-center justify-between mb-4">
           <span class="text-[12px] font-bold tracking-[0.15em] text-[#7e22ce]">02</span>
-          <span class="text-[10px] uppercase tracking-widest text-black/35 font-semibold">Semana 1</span>
+          <span class="text-[10px] uppercase tracking-widest text-black/50 font-semibold">Semana 1</span>
         </div>
         <h3 class="text-[15px] font-semibold mb-2.5">Propuesta</h3>
         <p class="text-black/60 text-[13px] font-light leading-relaxed">Alcance definido, plazos reales y precio cerrado. Sin sorpresas a mitad de camino.</p>
@@ -681,7 +601,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
       <article class="reveal rd-2 bg-white border border-black/5 rounded-[20px] p-7 hover:border-black/15 transition-colors">
         <div class="flex items-center justify-between mb-4">
           <span class="text-[12px] font-bold tracking-[0.15em] text-[#7e22ce]">03</span>
-          <span class="text-[10px] uppercase tracking-widest text-black/35 font-semibold">Semanas 2–4</span>
+          <span class="text-[10px] uppercase tracking-widest text-black/50 font-semibold">Semanas 2–4</span>
         </div>
         <h3 class="text-[15px] font-semibold mb-2.5">Construcción</h3>
         <p class="text-black/60 text-[13px] font-light leading-relaxed">Sprints cortos con entregas visibles cada semana. Ves avances, no promesas.</p>
@@ -689,7 +609,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
       <article class="reveal rd-3 bg-white border border-black/5 rounded-[20px] p-7 hover:border-black/15 transition-colors">
         <div class="flex items-center justify-between mb-4">
           <span class="text-[12px] font-bold tracking-[0.15em] text-[#7e22ce]">04</span>
-          <span class="text-[10px] uppercase tracking-widest text-black/35 font-semibold">Continuo</span>
+          <span class="text-[10px] uppercase tracking-widest text-black/50 font-semibold">Continuo</span>
         </div>
         <h3 class="text-[15px] font-semibold mb-2.5">Lanzamiento y mejora</h3>
         <p class="text-black/60 text-[13px] font-light leading-relaxed">Desplegamos, medimos y seguimos contigo iterando lo que más impacto tiene.</p>
@@ -703,8 +623,8 @@ details[open] .faq-icon { transform: rotate(45deg); }
 <section id="faq" class="bg-white py-24 md:py-28 px-6 scroll-mt-24">
   <div class="max-w-3xl mx-auto">
     <div class="max-w-xl mb-12 reveal">
-      <p class="text-[11px] uppercase tracking-[0.2em] text-black/40 font-semibold mb-4">FAQ</p>
-      <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.1] tracking-[-0.02em]">Preguntas frecuentes</h2>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-black/55 font-semibold mb-4">FAQ</p>
+      <h2 class="font-serifd text-[30px] md:text-[44px] leading-[1.08]">Preguntas frecuentes</h2>
     </div>
     <div class="reveal divide-y divide-black/10 border-y border-black/10">
       <details class="py-5">
@@ -760,11 +680,22 @@ details[open] .faq-icon { transform: rotate(45deg); }
 <section id="contacto" class="bg-[#eeeeee] py-24 md:py-28 px-6 scroll-mt-24">
   <div class="max-w-3xl mx-auto">
     <div class="reveal bg-white rounded-[28px] border border-black/10 shadow-sm px-8 py-14 md:px-14 text-center">
-      <p class="text-[11px] uppercase tracking-[0.2em] text-black/40 font-semibold mb-4">Contacto</p>
-      <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.1] tracking-[-0.02em] mb-5">¿Hablamos?</h2>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-black/55 font-semibold mb-4">Contacto</p>
+      <h2 class="font-serifd text-[30px] md:text-[44px] leading-[1.08] mb-5">¿Hablamos?</h2>
       <p class="text-black/60 text-[16px] font-light max-w-[440px] mx-auto mb-10">Cuéntanos qué quieres construir o qué proceso te roba horas cada semana. Te respondemos en menos de 24 h con una propuesta honesta.</p>
-      <!-- Conecta este formulario creando un form en formspree.io y sustituyendo TU_ID en el action -->
-      <form action="https://formspree.io/f/TU_ID" method="POST" class="text-left max-w-lg mx-auto">
+      <div id="formOk" class="hidden mb-8 max-w-lg mx-auto bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl px-6 py-4 text-[14px] font-medium" role="status">
+        ✓ Mensaje enviado. Te responderemos en menos de 24 horas.
+      </div>
+      <!-- FormSubmit reenvía a la dirección del action. Tras el primer envío pedirá activar la cuenta;
+           después podéis sustituir el email por el alias aleatorio que os da FormSubmit para no exponerlo. -->
+      <form id="contactForm" action="https://formsubmit.co/diegociborro99@gmail.com" method="POST" class="text-left max-w-lg mx-auto">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde highkeylabs.es">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.highkeylabs.es/?enviado=1">
+        <label class="hp-field" aria-hidden="true">No rellenes este campo si eres humano
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+        </label>
         <div class="grid sm:grid-cols-2 gap-4 mb-4">
           <div>
             <label for="cf-nombre" class="block text-[12px] font-semibold text-black/60 mb-1.5">Nombre</label>
@@ -779,6 +710,10 @@ details[open] .faq-icon { transform: rotate(45deg); }
           <label for="cf-mensaje" class="block text-[12px] font-semibold text-black/60 mb-1.5">¿Qué necesitas?</label>
           <textarea id="cf-mensaje" name="mensaje" rows="4" required class="w-full bg-[#fafafa] border border-black/10 rounded-xl px-4 py-3 text-[14px] focus:outline-none focus:border-[#7e22ce]/60 focus:ring-2 focus:ring-[#7e22ce]/15 transition-colors resize-none" placeholder="Una web, una automatización, software para tu equipo…"></textarea>
         </div>
+        <label class="flex items-start gap-3 mb-6 text-[13px] text-black/60 font-light cursor-pointer">
+          <input type="checkbox" name="privacidad" required class="mt-0.5 w-4 h-4 accent-[#7e22ce] flex-shrink-0">
+          <span>He leído y acepto la <a href="legal.html#privacidad" class="underline decoration-black/20 underline-offset-2 hover:text-[#7e22ce] transition-colors">política de privacidad</a>.</span>
+        </label>
         <div class="flex justify-center">
           <button type="submit" class="group inline-flex bg-[#7e22ce] hover:bg-[#6b21a8] text-white border border-transparent pl-6 pr-2 py-2 rounded-full font-medium text-[15px] items-center gap-4 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
             Enviar mensaje
@@ -788,10 +723,13 @@ details[open] .faq-icon { transform: rotate(45deg); }
           </button>
         </div>
       </form>
-      <p class="mt-8 text-[12px] text-black/40 tracking-wide text-center">Respuesta en menos de 24 h · Presupuesto cerrado · Código 100% tuyo</p>
+      <p class="mt-7 text-[13px] text-black/60 text-center">¿Prefieres el correo? Escríbenos a <a href="mailto:diegociborro99@gmail.com" class="font-semibold text-[#7e22ce] hover:underline">diegociborro99@gmail.com</a></p>
+      <p class="mt-4 text-[12px] text-black/55 tracking-wide text-center">Respuesta en menos de 24 h · Presupuesto cerrado · Código 100% tuyo</p>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="bg-white border-t border-black/10 px-6 pt-16 pb-8">
@@ -799,7 +737,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
     <div class="grid md:grid-cols-4 gap-10 mb-14">
       <div class="md:col-span-2">
         <div class="flex items-center gap-3 mb-4">
-          <img src="logo.png" alt="Logo de Highkey Labs" class="h-8 w-auto">
+          <img src="logo.png" alt="Logo de Highkey Labs" width="149" height="96" class="h-8 w-auto">
           <span class="text-[17px] font-semibold tracking-tight">Highkey Labs</span>
         </div>
         <p class="text-[14px] text-black/55 font-light max-w-xs leading-relaxed mb-5">Estudio digital: webs con estilo, automatizaciones IA y software a medida para el día a día. Creadores de Shiftia.</p>
@@ -809,7 +747,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </a>
       </div>
       <div>
-        <p class="text-[11px] uppercase tracking-[0.18em] text-black/40 font-bold mb-4">Servicios</p>
+        <p class="text-[11px] uppercase tracking-[0.18em] text-black/55 font-bold mb-4">Servicios</p>
         <ul class="space-y-2.5 text-[14px] text-black/60">
           <li><a href="#webs" class="hover:text-black transition-colors">Webs con estilo</a></li>
           <li><a href="#automatizaciones" class="hover:text-black transition-colors">Automatizaciones IA</a></li>
@@ -818,7 +756,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
         </ul>
       </div>
       <div>
-        <p class="text-[11px] uppercase tracking-[0.18em] text-black/40 font-bold mb-4">Producto</p>
+        <p class="text-[11px] uppercase tracking-[0.18em] text-black/55 font-bold mb-4">Producto</p>
         <ul class="space-y-2.5 text-[14px] text-black/60">
           <li><a href="https://www.shiftia.es" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-black transition-colors"><img src="shiftia-logo.svg" alt="" class="w-4 h-4 rounded" aria-hidden="true">Shiftia</a></li>
           <li><a href="#shiftia" class="hover:text-black transition-colors">Por qué Shiftia</a></li>
@@ -828,142 +766,15 @@ details[open] .faq-icon { transform: rotate(45deg); }
       </div>
     </div>
     <div class="border-t border-black/5 pt-6 flex flex-wrap items-center justify-between gap-4">
-      <span class="text-[12px] text-black/45">© <span id="year">2026</span> Highkey Labs · Web, IA y automatización</span>
-      <span class="text-[12px] text-black/35">Hecho con nuestro propio stack — como todo lo que entregamos.</span>
+      <span class="text-[12px] text-black/60">© <span id="year">2026</span> Highkey Labs · Web, IA y automatización</span>
+      <div class="flex items-center gap-5">
+        <a href="legal.html" class="text-[12px] text-black/60 hover:text-black transition-colors">Aviso legal</a>
+        <a href="legal.html#privacidad" class="text-[12px] text-black/60 hover:text-black transition-colors">Privacidad</a>
+        <span class="text-[12px] text-black/50 hidden sm:inline">Hecho con nuestro propio stack.</span>
+      </div>
     </div>
   </div>
 </footer>
 
-<script>
-(function () {
-  'use strict';
-
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Nav fija + barra de progreso
-  var nav = document.getElementById('topNav');
-  var bar = document.getElementById('progressBar');
-  function onScroll() {
-    if (window.scrollY > 40) { nav.classList.add('nav-scrolled'); }
-    else { nav.classList.remove('nav-scrolled'); }
-    var max = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(window.scrollY / max, 1) : 0) + ')';
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  // Rotador de oferta
-  var rotWord = document.getElementById('rotWord');
-  if (rotWord && !reduced) {
-    var words = ['webs novedosas', 'automatizaciones IA', 'software para el día a día', 'Shiftia'];
-    var wi = 0;
-    setInterval(function () {
-      rotWord.classList.add('out');
-      setTimeout(function () {
-        wi = (wi + 1) % words.length;
-        rotWord.textContent = words[wi];
-        rotWord.classList.remove('out');
-      }, 360);
-    }, 2600);
-  }
-
-  // Glow que sigue al cursor en el hero
-  var hero = document.getElementById('hero');
-  var glow = document.getElementById('heroGlow');
-  if (hero && glow && !reduced && window.matchMedia('(pointer: fine)').matches) {
-    hero.addEventListener('mousemove', function (e) {
-      var r = hero.getBoundingClientRect();
-      glow.style.left = (e.clientX - r.left) + 'px';
-      glow.style.top = (e.clientY - r.top) + 'px';
-      glow.style.opacity = '1';
-    });
-    hero.addEventListener('mouseleave', function () { glow.style.opacity = '0'; });
-  }
-
-  // Contadores animados (banda de métricas)
-  function animateCount(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10);
-    if (reduced || !isFinite(target)) { el.textContent = String(target); return; }
-    var start = null;
-    function step(ts) {
-      if (!start) { start = ts; }
-      var p = Math.min((ts - start) / 1200, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = String(Math.round(eased * target));
-      if (p < 1) { requestAnimationFrame(step); }
-    }
-    el.textContent = '0';
-    requestAnimationFrame(step);
-  }
-  var counters = document.querySelectorAll('[data-count]');
-  if ('IntersectionObserver' in window && counters.length) {
-    var cio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          animateCount(e.target);
-          cio.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.6 });
-    counters.forEach(function (el) { cio.observe(el); });
-  }
-
-  // Menú móvil
-  var menuBtn = document.getElementById('menuBtn');
-  var closeBtn = document.getElementById('closeBtn');
-  var menu = document.getElementById('mobileMenu');
-  function openMenu() {
-    menu.classList.remove('hidden');
-    menu.classList.add('flex');
-    menuBtn.setAttribute('aria-expanded', 'true');
-  }
-  function closeMenu() {
-    menu.classList.add('hidden');
-    menu.classList.remove('flex');
-    menuBtn.setAttribute('aria-expanded', 'false');
-  }
-  menuBtn.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
-  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
-
-  // Reveal on scroll
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(function (el) { io.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('visible'); });
-  }
-
-  // Tilt 3D en el mockup de webs (solo puntero fino y sin reduced motion)
-  var canTilt = window.matchMedia('(pointer: fine)').matches && !reduced;
-  if (canTilt) {
-    document.querySelectorAll('[data-tilt]').forEach(function (card) {
-      var inner = card.querySelector('.tilt-inner');
-      if (!inner) { return; }
-      card.addEventListener('mousemove', function (e) {
-        var r = card.getBoundingClientRect();
-        var rx = ((e.clientY - r.top) / r.height - 0.5) * -10;
-        var ry = ((e.clientX - r.left) / r.width - 0.5) * 10;
-        inner.style.transform = 'rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg)';
-      });
-      card.addEventListener('mouseleave', function () {
-        inner.style.transform = 'rotateX(0deg) rotateY(0deg)';
-      });
-    });
-  }
-
-  // Año dinámico
-  var year = document.getElementById('year');
-  if (year) { year.textContent = String(new Date().getFullYear()); }
-})();
-</script>
 </body>
 </html>

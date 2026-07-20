@@ -22,15 +22,32 @@ En Railway: **Settings → Networking → Custom Domain** → añade `highkeylab
 
 ## 4. Pendientes antes de compartir la URL
 
-- [ ] **Formulario**: crea un form gratis en [formspree.io](https://formspree.io), copia tu ID y sustituye `TU_ID` en el `action` del formulario de `index.html`. Hasta entonces el formulario no envía.
-- [ ] El vídeo del hero y la imagen del producto cargan desde CDNs externos (`cdn.sceneai.art` y `shiftia.es`). Funcionan, pero si quieres independencia total, descárgalos y sírvelos desde esta carpeta.
+- [ ] **Formulario**: el formulario ya envía vía [FormSubmit](https://formsubmit.co) a `diegociborro99@gmail.com`. El **primer envío** dispara un email de activación: haz clic en él una vez. Después, si quieres no exponer el email en el código, FormSubmit te da un alias aleatorio para sustituirlo en el `action`.
+- [ ] **Legal**: rellena los campos `[COMPLETAR]` de `legal.html` (titular, NIF, domicilio).
+- [ ] **Testimonio**: cuando tengas una cita real de un cliente (nombre + cargo), sustituye el bloque "Confían en Shiftia" según el TODO del HTML.
+
+## Regenerar el CSS
+
+El CSS de Tailwind está compilado en `styles.css` (ya no se usa el CDN). Si cambias clases en `index.html`, `legal.html` o `main.js`, recompila:
+
+```bash
+npx -y tailwindcss@3.4.17 -i src/input.css -o styles.css --content "index.html,legal.html,main.js" --minify
+```
+
+Y ejecuta las verificaciones: `node scripts/checks.mjs`.
 
 ## Qué hace cada archivo
 
 | Archivo | Para qué |
 |---|---|
 | `Dockerfile` | Imagen mínima con Caddy que sirve el sitio |
-| `Caddyfile` | Escucha en `$PORT`, compresión, caché y cabeceras de seguridad |
+| `Caddyfile` | Escucha en `$PORT`, compresión, caché, CSP y cabeceras de seguridad |
 | `railway.json` | Le dice a Railway que use el Dockerfile y el healthcheck en `/` |
-| `.dockerignore` | Deja fuera de la imagen el JPG fuente y archivos de desarrollo |
+| `styles.css` / `src/input.css` | CSS compilado de Tailwind y su fuente (fuentes self-hosted + estilos custom) |
+| `main.js` | Todo el JS del sitio (menú, animaciones, vídeo, formulario) |
+| `legal.html` | Aviso legal + política de privacidad (RGPD) |
+| `hero.mp4` / `hero-poster.jpg` | Vídeo del hero self-hosted y su póster de carga |
+| `og-image.png` | Imagen al compartir en WhatsApp/LinkedIn/Twitter |
+| `scripts/checks.mjs` | Verificaciones del sitio (`node scripts/checks.mjs`) |
+| `.dockerignore` | Deja fuera de la imagen los archivos de desarrollo |
 | `.gitignore` | Evita subir basura del sistema al repo |

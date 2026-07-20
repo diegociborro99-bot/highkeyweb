@@ -5,3 +5,6 @@ DEPLOY.md
 .git
 .gitignore
 railway.json
+scripts/
+src/
+node_modules/
