@@ -148,16 +148,23 @@
     });
   }
 
-  // Formulario: redirección de vuelta con ?enviado=1 y aviso de éxito
+  // Formulario: redirección de vuelta con ?enviado=1/0 y avisos
   var form = document.getElementById('contactForm');
   if (form) {
     var next = form.querySelector('input[name="_next"]');
     if (next) { next.value = location.origin + location.pathname + '?enviado=1'; }
+    // Si la API propia está configurada (Resend), el formulario la usa y llegan
+    // las plantillas de marca; si no, sigue en FormSubmit sin romperse.
+    fetch('/api/health')
+      .then(function (r) { return r.json(); })
+      .then(function (h) { if (h && h.ready) { form.setAttribute('action', '/api/contact'); } })
+      .catch(function () {});
   }
-  if (new URLSearchParams(location.search).get('enviado') === '1') {
-    var ok = document.getElementById('formOk');
-    if (ok) {
-      ok.classList.remove('hidden');
+  var enviado = new URLSearchParams(location.search).get('enviado');
+  if (enviado === '1' || enviado === '0') {
+    var banner = document.getElementById(enviado === '1' ? 'formOk' : 'formErr');
+    if (banner) {
+      banner.classList.remove('hidden');
       document.getElementById('contacto').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
     }
     history.replaceState(null, '', location.pathname);

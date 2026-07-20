@@ -4,6 +4,9 @@ root * /srv
 encode zstd gzip
 file_server
 
+# API de contacto (Node en el mismo contenedor)
+reverse_proxy /api/* 127.0.0.1:3000
+
 # Seguridad
 header {
 	X-Content-Type-Options nosniff

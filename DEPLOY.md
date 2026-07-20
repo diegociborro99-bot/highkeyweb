@@ -25,6 +25,27 @@ En Railway: **Settings → Networking → Custom Domain** → añade `highkeylab
 - [ ] **Formulario**: el formulario ya envía vía [FormSubmit](https://formsubmit.co) a `diegociborro99@gmail.com`. El **primer envío** dispara un email de activación: haz clic en él una vez. Después, si quieres no exponer el email en el código, FormSubmit te da un alias aleatorio para sustituirlo en el `action`.
 - [ ] **Testimonio**: cuando tengas una cita real de un cliente (nombre + cargo), sustituye el bloque "Confían en Shiftia" según el TODO del HTML.
 
+## Variables en Railway (emails de presupuesto con plantillas propias)
+
+Sin variables, el formulario funciona por FormSubmit (email básico). Para activar las
+**plantillas de marca** (aviso interno para ti + confirmación bonita al cliente):
+
+1. Crea cuenta gratis en [resend.com](https://resend.com) (3.000 emails/mes gratis).
+2. En Resend → **Domains** → añade `highkeylabs.es` y crea en tu DNS los registros
+   SPF/DKIM que te indica (2-3 registros TXT/CNAME). Espera a que verifique.
+3. En Resend → **API Keys** → crea una clave.
+4. En Railway → tu servicio → **Variables** → añade:
+
+| Variable | Obligatoria | Valor |
+|---|---|---|
+| `RESEND_API_KEY` | ✅ | La clave de Resend (`re_...`) |
+| `CONTACT_TO` | opcional | Dónde te llegan las solicitudes (por defecto `diegociborro99@gmail.com`) |
+| `CONTACT_FROM` | opcional | Remitente (por defecto `Highkey Labs <hola@highkeylabs.es>`; el dominio debe estar verificado en Resend) |
+
+Railway redespliega solo al guardar. El formulario detecta la API automáticamente
+(`/api/health`) y empieza a usar las plantillas — sin tocar código. `PORT` sigue
+siendo automático; no hace falta nada más.
+
 ## Regenerar el CSS
 
 El CSS de Tailwind está compilado en `styles.css` (ya no se usa el CDN). Si cambias clases en `index.html`, `legal.html` o `main.js`, recompila:

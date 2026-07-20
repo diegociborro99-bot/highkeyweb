@@ -117,6 +117,41 @@ check('Caddyfile cachea css/js/mp4/woff2', () => ['*.css', '*.js', '*.mp4', '*.w
 check('Dockerfile copia todos los ficheros nuevos', () =>
   ['styles.css', 'main.js', 'legal.html', 'hero.mp4', 'robots.txt', 'sitemap.xml', 'fonts'].every((f) => docker.includes(f)));
 
+// --- Sistema de presupuestos (plantillas + API) ---
+check('app/server.mjs y app/templates.mjs pasan node --check', () => {
+  execFileSync('node', ['--check', 'app/server.mjs']);
+  execFileSync('node', ['--check', 'app/templates.mjs']);
+  return true;
+});
+await (async () => {
+  let t = null;
+  try { t = await import('../app/templates.mjs'); } catch { /* aún no existe */ }
+  const datos = { nombre: 'Ana', email: 'ana@clinica.es', mensaje: 'Quiero <script>alert(1)</script> una web', fecha: '20/07/2026 21:00' };
+  check('plantilla interna: logo, datos, mailto y escape de HTML', () => {
+    if (!t) return false;
+    const { subject, html } = t.internalEmail(datos);
+    return subject.includes('Ana') && html.includes('https://www.highkeylabs.es/logo.png') &&
+      html.includes('ana@clinica.es') && html.includes('mailto:ana@clinica.es') &&
+      html.includes('&lt;script&gt;') && !html.includes('<script>alert') && !html.includes('undefined');
+  });
+  check('plantilla cliente: saludo, pasos, CTA a la web y sin fugas', () => {
+    if (!t) return false;
+    const { subject, html } = t.clientEmail(datos);
+    return subject.length > 0 && subject.length < 80 && html.includes('Ana') &&
+      html.includes('https://www.highkeylabs.es') && html.includes('24 h') &&
+      html.includes('legal.html') && !html.includes('undefined');
+  });
+})();
+check('Caddyfile enruta /api/* al servidor Node', () => caddy.includes('reverse_proxy') && caddy.includes('/api/*'));
+check('Dockerfile instala Node y arranca API + Caddy', () =>
+  docker.includes('nodejs') && docker.includes('app') && docker.includes('server.mjs'));
+check('main.js cambia el formulario a la API cuando está lista', () => {
+  const js = read('main.js');
+  return js.includes('/api/health') && js.includes('/api/contact');
+});
+check('banner de error de envío presente', () => index.includes('id="formErr"'));
+check('privacidad menciona Resend como encargado', () => read('legal.html').includes('Resend'));
+
 // --- Informe ---
 let fails = 0;
 for (const r of results) {
