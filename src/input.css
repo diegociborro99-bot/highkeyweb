@@ -168,6 +168,59 @@ body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
   100% { top: calc(100% - 8px); opacity: 0; }
 }
 
+/* Flujo animado del proceso: dot que recorre la línea + nodos que se encienden a su paso */
+.proc-dot {
+  position: absolute; top: -3.5px; left: 0; width: 8px; height: 8px; border-radius: 9999px;
+  background: #7e22ce; box-shadow: 0 0 0 4px rgba(126,34,206,0.16);
+  animation: procMove 8s linear infinite;
+  z-index: 10; /* por delante de las tarjetas: el dot cruza los nodos, no se esconde en los huecos */
+}
+@keyframes procMove {
+  0% { left: 0%; opacity: 0; }
+  3% { opacity: 1; }
+  97% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+.proc-num { position: relative; }
+.proc-num::after {
+  content: ""; position: absolute; inset: -5px; border-radius: 9999px;
+  border: 1.5px solid rgba(126,34,206,0.55);
+  opacity: 0; transform: scale(0.55);
+  animation: procPulse 8s ease-out infinite;
+  animation-delay: var(--pd, 0s);
+}
+@keyframes procPulse {
+  0% { opacity: 0; transform: scale(0.55); }
+  4% { opacity: 1; transform: scale(0.8); }
+  13% { opacity: 0; transform: scale(1.55); }
+  100% { opacity: 0; transform: scale(0.55); }
+}
+
+/* Contacto: borde conic rotatorio + blobs de ambiente a la deriva */
+@property --ca { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+.contact-card { position: relative; overflow: hidden; }
+.contact-card::before {
+  content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px;
+  background: conic-gradient(from var(--ca), rgba(126,34,206,0.5), transparent 28%, transparent 52%, rgba(99,102,241,0.45) 74%, rgba(126,34,206,0.5));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: caSpin 9s linear infinite; pointer-events: none; z-index: 1;
+}
+@keyframes caSpin { to { --ca: 360deg; } }
+.contact-blob { position: absolute; border-radius: 9999px; filter: blur(60px); pointer-events: none; }
+.cb-1 {
+  width: 340px; height: 340px; top: -120px; right: -100px;
+  background: radial-gradient(circle, rgba(126,34,206,0.16), transparent 65%);
+  animation: drift1 16s ease-in-out infinite alternate;
+}
+.cb-2 {
+  width: 300px; height: 300px; bottom: -110px; left: -90px;
+  background: radial-gradient(circle, rgba(94,207,177,0.18), transparent 65%);
+  animation: drift2 19s ease-in-out infinite alternate;
+}
+@keyframes drift1 { to { transform: translate(-36px, 28px) scale(1.12); } }
+@keyframes drift2 { to { transform: translate(30px, -24px) scale(1.1); } }
+
 /* Ticks animados de la mini-app (software a medida) */
 @keyframes tickPop {
   0%, 55% { transform: scale(0); opacity: 0; }
@@ -191,6 +244,10 @@ details[open] .faq-icon { transform: rotate(45deg); }
   .chart-line { stroke-dashoffset: 0; }
   .flow-dot { animation: none; opacity: 0; }
   .tick-anim { animation: none; transform: scale(1); opacity: 1; }
+  .proc-dot { animation: none; opacity: 0; }
+  .proc-num::after { animation: none; opacity: 0; }
+  .contact-card::before { animation: none; }
+  .contact-blob { animation: none; }
   .tilt-inner { transform: none !important; }
   .rot-word { transition: none; }
   #heroGlow { display: none; }

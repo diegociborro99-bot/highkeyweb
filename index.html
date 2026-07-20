@@ -580,11 +580,11 @@
       <p class="text-black/60 text-[16px] font-light">Un método claro, con entregas visibles desde la primera semana.</p>
     </div>
     <div class="relative">
-      <div id="procline" class="hidden lg:block absolute top-[52px] left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-[#7e22ce]/25 to-transparent" aria-hidden="true"></div>
+      <div id="procline" class="hidden lg:block absolute top-[44px] left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#7e22ce]/25 to-transparent" aria-hidden="true"><span class="proc-dot"></span></div>
       <div class="relative grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <article class="reveal bg-white border border-black/5 rounded-[20px] p-7 hover:border-black/15 transition-colors">
         <div class="flex items-center justify-between mb-4">
-          <span class="text-[12px] font-bold tracking-[0.15em] text-[#7e22ce]">01</span>
+          <span class="proc-num w-8 h-8 rounded-full bg-white border border-[#7e22ce]/30 text-[#7e22ce] flex items-center justify-center text-[11px] font-bold" style="--pd:.3s">01</span>
           <span class="text-[10px] uppercase tracking-widest text-black/50 font-semibold">Semana 0</span>
         </div>
         <h3 class="text-[15px] font-semibold mb-2.5">Descubrimiento</h3>
@@ -592,7 +592,7 @@
       </article>
       <article class="reveal rd-1 bg-white border border-black/5 rounded-[20px] p-7 hover:border-black/15 transition-colors">
         <div class="flex items-center justify-between mb-4">
-          <span class="text-[12px] font-bold tracking-[0.15em] text-[#7e22ce]">02</span>
+          <span class="proc-num w-8 h-8 rounded-full bg-white border border-[#7e22ce]/30 text-[#7e22ce] flex items-center justify-center text-[11px] font-bold" style="--pd:2.35s">02</span>
           <span class="text-[10px] uppercase tracking-widest text-black/50 font-semibold">Semana 1</span>
         </div>
         <h3 class="text-[15px] font-semibold mb-2.5">Propuesta</h3>
@@ -600,7 +600,7 @@
       </article>
       <article class="reveal rd-2 bg-white border border-black/5 rounded-[20px] p-7 hover:border-black/15 transition-colors">
         <div class="flex items-center justify-between mb-4">
-          <span class="text-[12px] font-bold tracking-[0.15em] text-[#7e22ce]">03</span>
+          <span class="proc-num w-8 h-8 rounded-full bg-white border border-[#7e22ce]/30 text-[#7e22ce] flex items-center justify-center text-[11px] font-bold" style="--pd:4.4s">03</span>
           <span class="text-[10px] uppercase tracking-widest text-black/50 font-semibold">Semanas 2–4</span>
         </div>
         <h3 class="text-[15px] font-semibold mb-2.5">Construcción</h3>
@@ -608,7 +608,7 @@
       </article>
       <article class="reveal rd-3 bg-white border border-black/5 rounded-[20px] p-7 hover:border-black/15 transition-colors">
         <div class="flex items-center justify-between mb-4">
-          <span class="text-[12px] font-bold tracking-[0.15em] text-[#7e22ce]">04</span>
+          <span class="proc-num w-8 h-8 rounded-full bg-white border border-[#7e22ce]/30 text-[#7e22ce] flex items-center justify-center text-[11px] font-bold" style="--pd:6.45s">04</span>
           <span class="text-[10px] uppercase tracking-widest text-black/50 font-semibold">Continuo</span>
         </div>
         <h3 class="text-[15px] font-semibold mb-2.5">Lanzamiento y mejora</h3>
@@ -679,9 +679,15 @@
 <!-- ===== CONTACTO ===== -->
 <section id="contacto" class="bg-[#eeeeee] py-24 md:py-28 px-6 scroll-mt-24">
   <div class="max-w-3xl mx-auto">
-    <div class="reveal bg-white rounded-[28px] border border-black/10 shadow-sm px-8 py-14 md:px-14 text-center">
-      <p class="text-[11px] uppercase tracking-[0.2em] text-black/55 font-semibold mb-4">Contacto</p>
-      <h2 class="font-serifd text-[30px] md:text-[44px] leading-[1.08] mb-5">¿Hablamos?</h2>
+    <div class="reveal contact-card bg-white rounded-[28px] border border-black/10 shadow-sm px-8 py-14 md:px-14 text-center">
+      <div class="contact-blob cb-1" aria-hidden="true"></div>
+      <div class="contact-blob cb-2" aria-hidden="true"></div>
+      <div class="relative">
+      <span class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-full px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
+        Respondemos en menos de 24 h
+      </span>
+      <h2 class="font-serifd text-[30px] md:text-[44px] leading-[1.08] mb-5">¿<em class="text-[#6d28d9]">Hablamos</em>?</h2>
       <p class="text-black/60 text-[16px] font-light max-w-[440px] mx-auto mb-10">Cuéntanos qué quieres construir o qué proceso te roba horas cada semana. Te respondemos en menos de 24 h con una propuesta honesta.</p>
       <div id="formOk" class="hidden mb-8 max-w-lg mx-auto bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl px-6 py-4 text-[14px] font-medium" role="status">
         ✓ Mensaje enviado. Te responderemos en menos de 24 horas.
@@ -724,7 +730,8 @@
         </div>
       </form>
       <p class="mt-7 text-[13px] text-black/60 text-center">¿Prefieres el correo? Escríbenos a <a href="mailto:diegociborro99@gmail.com" class="font-semibold text-[#7e22ce] hover:underline">diegociborro99@gmail.com</a></p>
-      <p class="mt-4 text-[12px] text-black/55 tracking-wide text-center">Respuesta en menos de 24 h · Presupuesto cerrado · Código 100% tuyo</p>
+      <p class="mt-4 text-[12px] text-black/55 tracking-wide text-center">Presupuesto cerrado · Código 100% tuyo · Sin permanencia</p>
+      </div>
     </div>
   </div>
 </section>
@@ -740,7 +747,6 @@
           <img src="logo.png" alt="Logo de Highkey Labs" width="149" height="96" class="h-8 w-auto">
           <span class="text-[17px] font-semibold tracking-tight">Highkey Labs</span>
         </div>
-        <p class="text-[14px] text-black/55 font-light max-w-xs leading-relaxed mb-5">Estudio digital: webs con estilo, automatizaciones IA y software a medida para el día a día. Creadores de Shiftia.</p>
         <a href="#contacto" class="inline-flex items-center gap-2 text-[13px] font-semibold text-[#7e22ce] hover:gap-3 transition-all">
           Cuéntanos tu proyecto
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>

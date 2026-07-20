@@ -89,6 +89,20 @@ check('referencias locales de index.html existen en disco', () => {
   return true;
 });
 
+check('proceso como flujo animado (dot en la línea + nodos con pulso)', () => {
+  const css = read('styles.css');
+  return index.includes('proc-dot') && (index.match(/class="proc-num/g) || []).length === 4 &&
+    css.includes('procMove') && css.includes('procPulse');
+});
+
+check('contacto más visual (borde conic animado + blobs de ambiente)', () => {
+  const css = read('styles.css');
+  return index.includes('contact-card') && index.includes('cb-1') && index.includes('cb-2') &&
+    css.includes('caSpin') && css.includes('drift1');
+});
+check('footer sin la descripción del estudio (solo texto visible)', () =>
+  !(index.split('<footer')[1] || '').includes('Estudio digital'));
+
 // --- Legal ---
 check('legal.html existe con privacidad y aviso legal', () => {
   const legal = read('legal.html');
