@@ -27,7 +27,7 @@ function layout({ preheader, kicker, headline, bodyRows, cta, note }) {
         <!-- Marca -->
         <tr><td style="padding:0 8px 24px 8px;">
           <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-            <td><img src="${WEB}/logo.png" alt="Highkey Labs" width="44" height="28" style="display:block; border:0;"></td>
+            <td><img src="${WEB}/logo.png" alt="Highkey Labs" width="45" height="29" style="display:block; border:0;"></td>
             <td style="padding-left:10px; font-family:${SANS}; font-size:15px; font-weight:700; color:#111111; letter-spacing:-0.2px;">Highkey Labs</td>
           </tr></table>
         </td></tr>

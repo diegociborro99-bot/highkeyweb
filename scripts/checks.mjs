@@ -75,7 +75,7 @@ check('imágenes de contenido con width/height', () => {
 // --- Código ---
 check('JS externo main.js (sin script inline salvo JSON-LD)', () => {
   const inline = [...index.matchAll(/<script(?![^>]*src=)([^>]*)>/g)].filter((m) => !m[1].includes('ld+json'));
-  return index.includes('src="main.js"') && inline.length === 0;
+  return /src="main\.js(\?v=\d+)?"/.test(index) && inline.length === 0;
 });
 check('main.js pasa node --check', () => {
   execFileSync('node', ['--check', 'main.js']);
