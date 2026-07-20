@@ -181,7 +181,16 @@ body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
   97% { opacity: 1; }
   100% { left: 100%; opacity: 0; }
 }
-.proc-num { position: relative; }
+.proc-num {
+  position: relative;
+  animation: procNumActive 8s ease infinite;
+  animation-delay: var(--pd, 0s);
+}
+@keyframes procNumActive {
+  0%, 2% { background: #fff; color: #7e22ce; }
+  5%, 11% { background: #7e22ce; color: #fff; border-color: #7e22ce; box-shadow: 0 4px 14px rgba(126,34,206,0.35); }
+  16%, 100% { background: #fff; color: #7e22ce; }
+}
 .proc-num::after {
   content: ""; position: absolute; inset: -5px; border-radius: 9999px;
   border: 1.5px solid rgba(126,34,206,0.55);
@@ -245,6 +254,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
   .flow-dot { animation: none; opacity: 0; }
   .tick-anim { animation: none; transform: scale(1); opacity: 1; }
   .proc-dot { animation: none; opacity: 0; }
+  .proc-num { animation: none; }
   .proc-num::after { animation: none; opacity: 0; }
   .contact-card::before { animation: none; }
   .contact-blob { animation: none; }

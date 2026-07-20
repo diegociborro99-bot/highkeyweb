@@ -92,7 +92,7 @@ check('referencias locales de index.html existen en disco', () => {
 check('proceso como flujo animado (dot en la línea + nodos con pulso)', () => {
   const css = read('styles.css');
   return index.includes('proc-dot') && (index.match(/class="proc-num/g) || []).length === 4 &&
-    css.includes('procMove') && css.includes('procPulse');
+    css.includes('procMove') && css.includes('procPulse') && css.includes('procNumActive');
 });
 
 check('contacto más visual (borde conic animado + blobs de ambiente)', () => {
